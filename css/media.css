@@ -1,0 +1,82 @@
+@media only screen and (max-width: 767px) {
+    .navbar-brand {
+      margin-left: 50px;
+    }
+    #content{
+      margin-top: -90px;
+      box-sizing: border-box;
+    }
+    .header{
+      box-sizing: border-box;
+    }
+    .info2{
+      display: none;
+    }
+    #card{
+      margin-left: 40px;
+    }
+    #card2{
+      margin-top: -40px;
+      width: 95%;
+    }
+    .section2{
+      margin-top: -900px;
+    }
+    #kart{
+      margin-left: 80px;
+    }
+    #kart2{
+      display: none;
+    }
+    #kart3{
+      display: none;
+    }
+    #give{
+      margin-top: -160px;
+    }
+    .amet{
+      display: none;
+    }
+    .inst{
+      display: none;
+    }
+    #icon{
+      display: none;
+    }
+    #foot{
+      width: 90%;
+      margin: 0 auto;
+      margin-top: 200px;
+      height: 500px;
+    }
+    .login{
+      display: none;
+    }
+    #border{
+      width: 100%;
+      margin: 0 auto;
+      height: 100px;
+    }
+    .section5{
+      width: 600px;
+    }
+    #aris{
+      display: none;
+    }
+    #pro{
+      display: none;
+    }
+    #kart2{
+      display: none;
+    }
+    #kart3{
+      display: none;
+    }
+    #columan{
+      display: none;
+    }
+    #roq1{
+      display: none;
+    }
+       
+    }

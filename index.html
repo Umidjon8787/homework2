@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homework</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/media.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+ 
+    <nav class="navbar navbar-expand-lg navbar-light ">
+        <div class="container-fluid">
+          <a class="navbar-brand ms-5 href="#"><img width="50px" height="50px" src="data:image/png;base64,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" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-left: 5%;">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="#">Resource Center</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#/Blog">Blog</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Featured
+                </a>
+              
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ">Contact</a>
+              </li>
+
+            </ul>
+            <form class="d-flex">
+              <div class="input-group mb-3 mt-3 w-100">
+                <input  style="border-radius: 0;" type="text" class="form-control" placeholder="Search" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button style="width: 30%;" class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!--=====head======-->
+      <div class="header">
+       <div class="steklo">
+        <div class="container px-4" id="content">
+          <div class="row gx-5">
+            <div class="col-lg-9">
+             <div class="p-3">
+               <span class="the">The</span>
+               <span class="more">most complete</span>
+               <p class="lorem">Photography resource.</p>
+               <p class="welcome">Welcome at Template Resource. This template is packed with <br> useful features to built out your own resource website.</p>
+
+               
+                <div class="row gx-5 text-center mt-5" >
+                  <div class="col-6">
+                   <div class="p-2 border" style="background-color: #F55F39;">
+                     <h4 class="our">Visit our Blog</h4>
+                    
+                     <span class="info">Stories, News & info</span>
+                   </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="p-2 border bg-white">
+                      <h4 class="our1">Resource Center</h4>
+                    
+                      <span class="info2">Tips, Tricks & Tutorials</span>
+
+                    </div>
+                  </div>
+               
+              </div>
+             </div>
+            </div>
+
+            <!--Cards-->
+            
+           
+          </div>
+        </div>
+       </div>
+      </div>
+      <!--Blog-->
+      <div class="blog" style="width: 100%; padding-top: 100px;">
+        <div class="container px-4">
+          <div class="row gx-5">
+            <div class="col-lg-12 text-center">
+             <div class="p-3  ">
+               <p class="blog1"> Recently in our <br/> Photography <span class="bloog"> Blog</span>.</p> 
+
+               <!--Rows-->
+
+               <div class="container px-4 mt-5">
+                <div class="row gx-5">
+                  <div class="col">
+                   <div class="p-3 ">
+                    <div id="card" class="card" style="width: 500px;">
+                      <img src="./img/img1.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="world">Photographers Who Changed the World forever</h5>
+                        <p id="eum" class="card-text">Debitis ea dicta ea eum laboriosam quis dolore repudiandae. Est hic quod et similique ullam et. Ipsum ipsam temporibus quo ea natus enim quae officia nulla.</p>
+                      </div>
+                    </div>
+                   </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="p-3 ">
+                      <div class="container px-4">
+                        <div class="row gx-5">
+                          <div class="col-lg-12">
+                           <div class="p-3 ">
+                             <img width="100%"; height="300px" src="./img/imgg1.jpeg" alt="">
+                           </div>
+                          </div>
+                          <div class="col-lg-12">
+                            <div class="p-3 ">
+                              <img width="100%"; height="300px" src="./img/img3.jpg" alt="">
+                            </div>
+                           </div>
+                                                
+                        
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--End-->
+              <div class="section"  style="padding-top: 280px;" >
+                <div  id="card2 " class="card" style="width: 30rem; text-align: left; background: #352F77;">
+                  
+                  <div class="card-body">
+                    <h5 id="title" class="card-title">Inspired to get your photography to the next level?</h5>
+                    <p id="sit" class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                    <a id="but" style="border-radius: 0;" href="#" class="btn btn-success">Resource Center</a>
+                  </div>
+                </div>
+                
+                 
+              </div>
+              
+             </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <!--header2-->
+      <!--Cards-->
+      <div class="section2"  style="padding-top: 250px;">
+        <div class="container px-4" >
+          <div class="row gx-5">
+            <div class="col-lg-12">
+             <div class="p-3 ">
+               <h1 id="full" class="text-center text-white">Get full accesses. Today</h1>
+             </div>
+            </div>
+            
+          </div>
+        </div>
+
+
+
+        <div class="container px-4 mt-5">
+          <div class="row gx-5">
+            <div class="col-lg-4 col-md-4">
+             <div class="p-3 ">
+              <div id="kart" class="card p-3" style="width: 18rem;">
+                <a href="" class="send">1 Month Access</a>
+
+                <div class="card-body">
+                  <h5 id="cerd" class="card-title"><span class="mon">$ 49</span>/month</h5>
+                  <br>
+                  <i class="fa-solid fa-check text-success"></i>
+                  <span class="to">Full Access to Resources</span>
+                  <br>
+                  <i class="fa-solid fa-check text-success"></i>
+                  <span class="to">Access to Blog</span>
+                  <br>
+                  <i class="fa-solid fa-check text-success"></i>
+                  <span class="to">Access to News</span>
+                  <br>
+                  <br>
+                  <button class="btn btn-success" style="border-radius: 0;">Buy Now</button>
+                  <p class="will">
+                    On checkout you will be charged the total amount of $534 for the 6 month package.
+                  </p>
+
+                  
+                </div>
+              </div>
+             </div>
+            </div>
+            <div class="col-lg-4 col-md-4">
+              <div class="p-3 ">
+               <div id="kart2" class="card p-3" style="width: 18rem;">
+                 <a href="" class="send text-success">1 Year Access</a>
+ 
+                 <div class="card-body">
+                   <h5 id="cerd" class="card-title"><span class="mon">$ 67</span>/month</h5>
+                   <br>
+                   <i class="fa-solid fa-check text-success"></i>
+                   <span class="to">Full Access to Resources</span>
+                   <br>
+                   <i class="fa-solid fa-check text-success"></i>
+                   <span class="to">Access to Blog</span>
+                   <br>
+                   <i class="fa-solid fa-check text-success"></i>
+                   <span class="to">Access to News</span>
+                   <br>
+                   <br>
+                   <button class="btn btn-success text-white" style="border-radius: 0;">Buy Now</button>
+                   <p class="will">
+                     On checkout you will be charged the total amount of $534 for the 6 month package.
+                   </p>
+ 
+                   
+                 </div>
+               </div>
+              </div>
+             </div>
+             <div class="col-lg-4 col-md-4">
+              <div class="p-3 ">
+               <div id="kart3" class="card p-3" style="width: 18rem;">
+                 <a href="" class="send">Lifetime Access</a>
+ 
+                 <div class="card-body">
+                   <h5 id="cerd" class="card-title"><span class="mon">$ 89</span>/month</h5>
+                   <br>
+                   <i class="fa-solid fa-check text-success"></i>
+                   <span class="to">Full Access to Resources</span>
+                   <br>
+                   <i class="fa-solid fa-check text-success"></i>
+                   <span class="to">Access to Blog</span>
+                   <br>
+                   <i class="fa-solid fa-check text-success"></i>
+                   <span class="to">Access to News</span>
+                   <br>
+                   <br>
+                   <button class="btn btn-" style="border-radius: 0;">Buy Now</button>
+                   <p class="will">
+                     On checkout you will be charged the total amount of $534 for the 6 month package.
+                   </p>
+ 
+                   
+                 </div>
+               </div>
+              </div>
+             </div>
+          </div>
+        </div>
+
+        <!--Content-->
+        <div  class="container mt-5 px-4" >
+          <div id="give" class="row gx-5">
+            <div class="col-6">
+             <div class="p-3  ">
+              <i id="icon" class="fa-solid fa-circle-exclamation text-white"></i>
+              <span class="inst">Instant Access</span>
+              <br>
+              <p class="amet">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.</p>
+
+             </div>
+            </div>
+            
+          </div>
+        </div>
+        
+      </div>
+
+      <!--Imglar-->
+     <div class="header2 mt-5">
+      <div class="container px-4">
+        <div class="row gx-5">
+          <div class="col-lg-12">
+           <div  class="p-3 t">
+             <h1 class="what">What <span class="other">others</span> say.</h1>
+           </div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="container px-4">
+        <div class="row gx-5">
+          <div class="col-lg-6 col-md-12">
+            <div class="p-3 ">
+              <img width="100%" src="./img/foot page.png" alt="">
+                
+            </div>
+          </div>
+
+                  
+          <div class="col-lg-6 col-md-12 mt-5">
+            <div class="p-3 border">
+              <p class="kind">What kind of<br> photographer <span class="you">Are you ?</span></p>
+              <br>
+              <div class="container px-4">
+                <div class="row gx-5">
+                  <div class="col-lg-12">
+                   <div class="p-3 ">
+                     <a class="ter" href="">Amateur</a>
+                     <p class="dolor">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius. <i class="fa-solid fa-chevron-right s"></i> </p>
+                     <a class="ter1" href="">More Information</a>
+                     <hr>
+                   </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="p-3 b">
+                      <a class="ter" href="">Beginner</a>
+                      <p class="dolor">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius. <i class="fa-solid fa-chevron-right s"></i></p>
+                      <a class="ter1" href="">More Information</a>
+                      <hr>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="p-3 ">
+                      <a class="ter" href="">Professional</a> 
+                      <p class="dolor">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius.<i class="fa-solid fa-chevron-right s"></i></p> 
+                      <a class="ter1" href="">More Information</a>
+                      <hr>
+                    </div>
+                    <br>
+                    
+                    <a class="cen" href="">Visit Resource Center</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     </div>
+
+
+
+     <div class="header3" style="margin-top: 120px;">
+      <div class="container px-4">
+        <div class="row gx-5">
+          <div class="col-lg-12">
+           <div class="p-3 ">
+             <p class="comp">The most complete Photography resource.</p>
+             
+             <h1 class="sed">Search our Resources:</h1>
+           </div>
+          </div>
+         
+        </div>
+        <div class="row gx-5">
+          <div class="col-lg-12">
+           <div class="p-3 ">
+            <div style="width: 80%; margin: 0 auto;" class="input-group mb-3">
+              <input style="border-radius: 0; outline: none; font-family:'Poppins' ;" type="text" class="form-control p-3" placeholder="Search" aria-label="Recipient's username" aria-describedby="button-addon2">
+              <button style="border-radius: 0; width: 30%;" class="btn btn-success" type="button" id="button-addon2">Search</button>
+            </div>
+           </div>
+          </div>
+         
+        </div>
+      </div>
+
+
+
+
+      <div class="container px-4 mt-5">
+        <div class="row gx-5">
+          <div class="col-lg-4 col-md-12">
+           <div class="p-3 ">
+            <div id="kard"class="card p-3 border-4 bg-light" style="width: 24rem;">
+              <a href="" class="send">For Beginners</a>
+
+              <div class="card-body">
+                
+                <br>
+                <i class="fa-solid fa-file-lines"></i>
+                <span class="too">10 Beginner tips to get started</span>
+                <br>
+                <i class="fa-solid fa-file-lines"></i>
+                <span class="too">Basic gear kit for Beginners</span>
+                <br>
+                <i class="fa-solid fa-file-lines"></i>
+                <span class="too">The first steps in Photo Editing</span>
+                <br>
+                <i class="fa-solid fa-file-lines"></i>
+                <span class="too">The first steps in using Lightroom</span>
+                <br>
+                
+                
+                <p class="will">
+                  On checkout you will be charged the total amount of $534 for the 6 month package.
+                </p>
+
+                
+              </div>
+              <div class="footview">
+                  <p style="padding: 10px;">View All</p>
+              </div>
+            </div>
+           </div>
+
+          </div>
+
+          <div class="col-lg-4 col-md-12">
+            <div class="p-3 ">
+             <div id="kard"class="card p-3 border-4 bg-light" style="width: 24rem;">
+               <a href="" class="send">For Amateurs</a>
+ 
+               <div class="card-body">
+                 
+                 <br>
+                 <i class="fa-solid fa-file-lines"></i>
+                 <span class="too">Basic gear kit for Amateurs</span>
+                 <br>
+                 <i class="fa-solid fa-file-lines"></i>
+                 <span class="too">The next steps in Photo Editing</span>
+                 <br>
+                 <i class="fa-solid fa-file-lines"></i>
+                 <span class="too">The next steps in using Lightroom</span>
+                 <br>
+                 <i class="fa-solid fa-file-lines"></i>
+                 <span class="too">Using Photoshop for Photo Editing</span>
+                 <br>
+                 
+                 
+                 <p class="will">
+                   On checkout you will be charged the total amount of $534 for the 6 month package.
+                 </p>
+ 
+                 
+               </div>
+                <div class="footview">
+                  <p style="padding: 10px;">View All</p>
+                </div>
+             </div>
+            </div>
+ 
+           </div>
+
+           <div class="col-lg-4 col-md-12">
+            <div class="p-3 ">
+             <div id="kard"class="card p-3 border-4 bg-light" style="width: 24rem;">
+               <a href="" class="send">For Professionals</a>
+ 
+                <div class="card-body">
+                 
+                  <br>
+                  <i class="fa-solid fa-file-lines"></i>
+                  <span class="too">Basic gear kit for Pros</span>
+                  <br>
+                  <i class="fa-solid fa-file-lines"></i>
+                  <span class="too">Create custom filters in Lightroom</span>
+                  <br>
+                  <i class="fa-solid fa-file-lines"></i>
+                  <span class="too">Using Lightroom as a Pro</span>
+                  <br>
+                  <i class="fa-solid fa-file-lines"></i>
+                  <span class="too">Using Photoshop for Photo Editing</span>
+                  <br>
+                 
+                 
+                  <p class="will">
+                   On checkout you will be charged the total amount of $534 for the 6 month package.
+                 </p>
+ 
+                 
+                </div>
+                <div class="footview">
+                  <p style="padding: 10px;">View All</p>
+                </div>
+             </div>
+             
+            </div>
+            
+           </div>
+          
+
+          
+        </div>
+      </div>
+
+     </div>
+     <div class="footer" style="padding-top: 150px;">
+      <div class="container overflow-hidden">
+        <div class="row gx-5">
+          <div class="col-lg-4 col-md-7">
+           <div class="p-3">
+             <img src="./img/around.png" alt="">
+             <p class="theis">Welcome at Template Resource. This template is packed with useful features to built out your own resource website.</p>
+           </div>
+          </div>
+          <div  class="col-lg-3 col-md-6">
+            <div class="p-3">
+              <p class="us">About us</p>
+              <a class="tem" href="">About us</a>
+              <br>
+              <a class="tem" href="">Our team</a>
+              <br>
+              <a class="tem" href="">Frequent Questions</a>
+              <br>
+              <a class="tem" href="">Contact us</a>
+            </div>
+          </div>
+          <div id="columan" class="col-lg-3 col-md-6">
+            <div class="p-3 ">
+              <p class="us">Information</p>
+              <a class="tem" href="">Blog</a>
+              <br>
+              <a class="tem" href="">Pricing</a>
+              <br>
+              <a class="tem" href="">Resources</a>
+              <br>
+              <a class="tem" href="">Frequent Questions</a>
+            </div>
+          </div>
+          <div id="columan" class="col-lg-2 col-md-6">
+            <div class="p-3 ">
+              <p class="us">Contact</p>
+              <a class="tem" href="">Email us</a>
+              <br>
+              <a class="tem" href="">Facebook</a>
+              <br>
+              <a class="tem" href="">Telegram</a>
+
+              <br>
+              <a class="tem" href="">Twitter</a>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="roq1" class="container overflow-hidden " style="margin-top: 90px;">
+        <div class="row gx-5 text-center">
+          <div class="col-lg-6">
+           <div class="p-3 ">
+             <span class="developer">Copyright © <span class="develop"> Flash Studio</span> </span>
+             <span class="developer">Powered By <span class="develop"> Umidjon Gafurovich</span> </span>
+
+           </div>
+          </div>
+          
+        </div>
+      </div>
+
+     </div>
+      
+      
+    
+</body>
+<script src="./js/all.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+<script>
+  AOS.init();
+</script>
+</html>
